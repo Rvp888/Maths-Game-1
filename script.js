@@ -53,12 +53,13 @@ document.getElementById("start-reset").onclick = function() {
 
 function startCountdown() {
     action = setInterval(function(){
-        timeRemaining -= 1;
+        timeRemaining -= 0;
         document.getElementById("time-remaining-value").innerHTML = timeRemaining;
+        if(timeRemaining == 0) {// game over
+            stopCountdown();
+            document.getElementById("gameover").style.display = "block";
+        }
     }, 1000);
-    if (timeRemaining == 0) {// game over
-        stopCountdown();
-    }
 }
 
 function stopCountdown() {
