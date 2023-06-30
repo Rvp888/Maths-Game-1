@@ -110,6 +110,17 @@ html {
     position: relative;
 }
 
+#time-remaining {
+    width: 152px;
+    padding: 10px;
+    position: absolute;
+    top: 395px;
+    left: 400px;
+    background-color: rgba(181, 235, 36, 0.8);
+    border-radius: 3px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+}
 
 
 
