@@ -46,15 +46,42 @@ document.getElementById("start-reset").onclick = function() {
              //change button to reset
              //generate new Q&A
 
-             
+
 // Clicking on an answer box;
 
-document.getElementById("box1").onclick = function () {
-    //check if we are playing
-    if (playing == true) {//yes
-
-    } 
-}             
+for (let i = 1; i <= 4; i++) {
+    document.getElementById("box"+i).onclick = function () {
+        //check if we are playing
+        if (playing == true) {//yes
+            if (this.innerHTML == correctAnswer) {
+                //correct answer
+                //increase score by 1
+                score++;
+                document.getElementById("scoreValue").innerHTML = score;
+                //hide wrong box and show correct box
+                hide("wrong");
+                show("correct");
+                //hide correct box after 1 sec
+                setTimeout(() => {
+                    hide("correct");
+                }, 1000);
+                //Generate new Q&A
+                generateQA();
+            }
+            else {
+                //wrong answer
+                //hide correct box and show wrong box
+                hide("correct");
+                show("wrong");
+                //hide wrong box after 1 sec
+                setTimeout(() => {
+                    hide("wrong");
+                }, 1000);
+            }
+        } 
+    }
+}
+             
 // if we click on answer box
    //if we are playing
        //correct?
@@ -64,12 +91,14 @@ document.getElementById("box1").onclick = function () {
 
         //no -> show try again box for 1sec
 
+
+
 //Functions
 
 //Start countdown timer
 function startCountdown() {
     action = setInterval(function(){
-        timeRemaining -= 10;
+        timeRemaining -= 1;
         document.getElementById("time-remaining-value").innerHTML = timeRemaining;
         if(timeRemaining == 0) {// game over
             stopCountdown();
