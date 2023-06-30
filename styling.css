@@ -62,3 +62,20 @@ html {
     line-height: 45px;
     box-shadow: 0 4px #8153a8;
 }
+
+#choices {
+    width: 450px;
+    height: 100px;
+    margin: 5px auto;
+}
+
+.box {
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 36.5px;
+}
+#box4 {
+    margin-right: 0;
+}
