@@ -52,3 +52,13 @@ html {
     font-family: cursive, sans-serif;
     color: black;
 }
+
+#instruction {
+    width: 450px;
+    height: 50px;
+    background-color: #b481d9;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0 4px #8153a8;
+}
