@@ -22,3 +22,21 @@ html {
     left: 500px;
     box-shadow: 0 4px #9da853;
 }
+
+#correct {
+    position: absolute;
+    left: 260px;
+    background-color: #42e252;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+
+#wrong {
+    position: absolute;
+    left: 250px;
+    background-color: #de401a;
+    color: white;
+    padding: 11px;
+    display: none;
+}
