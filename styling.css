@@ -87,30 +87,30 @@ html {
     margin-right: 0;
 }
 
-.box:hover {
+.box:hover, #start-reset:hover {
     background-color: #9c89f6;
     color: white;
     box-shadow: 0 4px #6b54d3;
 }
 
-.box:active {
+.box:active, #start-reset:active {
     box-shadow: 0 0 #6b54d3; 
     top: 4px;
 }
 
 #start-reset {
-    width: 85px;
-    height: 85px;
-    background-color: white;
-    float: left;
-    margin-right: 36.5px;
+    width: 78px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+    padding: 10px;
     border-radius: 3px;
     cursor: pointer;
     box-shadow: 0 4px rgba(0, 0, 0, 0.2);
     text-align: center;
-    line-height: 80px;
     position: relative;
 }
+
+
 
 
 
