@@ -56,4 +56,11 @@ function startCountdown() {
         timeRemaining -= 1;
         document.getElementById("time-remaining-value").innerHTML = timeRemaining;
     }, 1000);
+    if (timeRemaining == 0) {// game over
+        stopCountdown();
+    }
+}
+
+function stopCountdown() {
+    clearInterval(action);
 }
