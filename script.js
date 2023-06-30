@@ -3,6 +3,7 @@ let playing = false;
 let score;
 let action;
 let timeRemaining;
+let correctAnswer;
 
 // if we click on the start/reset button
 document.getElementById("start-reset").onclick = function() {
@@ -10,6 +11,8 @@ document.getElementById("start-reset").onclick = function() {
     if(playing == true) {
         location.reload(); // reload page
     } else {// if we are not playing
+        //hide game over box
+        hide("gameover");
         //change mode to playing
         playing = true
         //set score to 0
@@ -43,7 +46,15 @@ document.getElementById("start-reset").onclick = function() {
              //change button to reset
              //generate new Q&A
 
+             
+// Clicking on an answer box;
 
+document.getElementById("box1").onclick = function () {
+    //check if we are playing
+    if (playing == true) {//yes
+
+    } 
+}             
 // if we click on answer box
    //if we are playing
        //correct?
@@ -91,5 +102,22 @@ function show(id) {
 
 //generate Q & A
 function generateQA() {
-
+    let x = Math.round(Math.random()*9) + 1;
+    let y = Math.round(Math.random()*9) + 1;
+    correctAnswer = x * y;
+    document.getElementById("question").innerHTML = x + "x" + y;
+    let correctPosition = Math.round(Math.random()*3) + 1;
+    document.getElementById("box"+correctPosition).innerHTML = correctAnswer; // fill one random box with correct answer;
+    //fill other boxes with different wrong answer
+    let answers = [correctAnswer];
+    for (let i = 1; i <= 4; i++) {
+        if (i != correctPosition) {
+            let wrongAnswer = (Math.round(Math.random()*9) + 1) * (Math.round(Math.random()*9) + 1);
+            while (answers.includes(wrongAnswer)) {
+                wrongAnswer = (Math.round(Math.random()*9) + 1) * (Math.round(Math.random()*9) + 1);
+            }
+            document.getElementById("box"+i).innerHTML = wrongAnswer;
+            answers.push(wrongAnswer);
+        }
+    }
 }
