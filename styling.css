@@ -80,6 +80,11 @@ html {
     box-shadow: 0 4px rgba(0, 0, 0, 0.2);
     text-align: center;
     line-height: 80px;
+    position: relative;
+    /* transition: all 0.1s; */
+}
+#box4 {
+    margin-right: 0;
 }
 
 .box:hover {
@@ -88,6 +93,24 @@ html {
     box-shadow: 0 4px #6b54d3;
 }
 
-#box4 {
-    margin-right: 0;
+.box:active {
+    box-shadow: 0 0 #6b54d3; 
+    top: 4px;
 }
+
+#start-reset {
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 36.5px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+}
+
+
+
