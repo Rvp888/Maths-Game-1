@@ -40,3 +40,15 @@ html {
     padding: 11px;
     display: none;
 }
+
+#question {
+    width: 450px;
+    height: 150px;
+    margin: 50px auto 10px auto;
+    background-color: #9da0ea;
+    box-shadow: 0 4px #535aa8;
+    font-size: 100px;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    color: black;
+}
